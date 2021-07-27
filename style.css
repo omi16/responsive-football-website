@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color:royalblue;
+    margin-bottom: 30px;
 }
 .half-width{
     width: 40%;
@@ -20,6 +21,8 @@ h1{
     margin-bottom: 10px;
 }
 .button-style{
+    width: 130px;
+    padding: 5px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,12 +32,80 @@ h1{
 .button{
     text-decoration: none;
     color: white;
-    width: 168px;
-    height: 44px;
     padding: 5px;
 }
 .banner-image img{
     width: 500px;
     height: 400px;
     padding: 30px;
+    transition: transform .5s ease;
+}
+.top-banner:hover img {
+    transform: scale(1.5);
+  }
+/* players' info */
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-row-gap: 30px;
+    margin: 0px 100px;
+    margin-bottom: 30px;
+}
+.player img{
+    width: 330px;
+    height: 256px;
+    justify-content: center;
+}
+.player{
+    width: 330px;
+    height: 474px;
+    padding: 7px;
+    box-shadow: 2px 2px 30px gray;
+    text-align: left;
+}
+.player h2{
+    font-size: 28px;
+}
+.player p{
+    font-size: 16px;
+}
+/* footer style */
+footer{
+    margin-top: 100px;
+}
+.footer img{
+    width: 484px;
+    height: 110px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.fab{
+    color: gray;
+    padding: 5px;
+}
+.footer p{
+    text-align: center;
+}
+/* media query */
+/* mobile device */
+@media only screen and (max-width:688px){
+    .top-banner{
+        display: block;
+    }
+    .half-width h1{
+        margin-left: 70%;
+    }
+    .button-style{
+        margin-left: 70%;
+    }
+    .players {
+        grid-template-columns: repeat(1,1fr);
+    }
+   
 }
